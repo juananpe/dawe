@@ -1,0 +1,12 @@
+{
+  "undef": true,
+  "unused": true,
+
+  /* Environment */
+  "browser": true,
+
+  /* Global */
+  "globals": {
+    "QUnit": false
+  }
+}
