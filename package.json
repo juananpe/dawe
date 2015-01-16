@@ -6,6 +6,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-qunit": "^0.5.2",
     "grunt-git-authors": "^2.0.1",
+    "qunit-assert-html": "^0.3.0",
     "qunitjs": "^1.16.0"
   }
 }
