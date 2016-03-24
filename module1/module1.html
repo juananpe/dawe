@@ -45,40 +45,43 @@
 		de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.</p>
 	</section>
 	<section>
-	<h1>El algoritmo de perfilado de HTML5</h1>
-	<h2>Definiendo secciones en HTML5</h2>
+	<h2>El algoritmo de perfilado de HTML5</h2>
+	<h3>Definiendo secciones en HTML5</h3>
 
 	Todo el contenido incluido dentro del elemento &lt;body&gt; es parte de una sección. Las secciones en HTML5 pueden ser anidadas. 
 	Además de la sección principal, definida por el elemento &lt;body&gt;, los límites de la sección son definidos explícita o implícitamente. 
 	La secciones definidas explícitamente son el contenido definido en las etiquetas &lt;body&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, 
-	&lt;footer&gt;, &lt;header&gt;, y &lt;nav&gt;. Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una 
+	&lt;footer&gt;, &lt;header&gt;, y &lt;nav&gt;. 
+	<footer>Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una 
 	sección anidada puede tener un elemento &lt;h1&gt;. Consulte también Definiendo cabeceras en HTML5.<br />
+	</footer>
 	<br />
 
 	<aside>
 		<strong>Ejemplo:</strong>
-		<pre>
-			<section>
-				<h1>Forest elephants</h1>
-				<section>
-					<h1>Introduction</h1>
-					<p>In this section, we discuss the lesser known forest elephants.
-				</section>
-				<section>
-					<h1>Habitat</h1>
-					<p>Forest elephants do not live in trees but among them.
-				</section>
-				<aside>
-					<p>advertising block
-				</aside>
-			</section>
-			<footer>
-			<p>(c) 2010 The Example company
-			</footer>
+		<pre><code>
+&lt;section&gt;
+	&lt;h1&gt;Forest elephants&lt;/h1&gt; 
+	&lt;section&gt; 
+	   &lt;h1&gt;Introduction&lt;/h1&gt; 
+	   &lt;p&gt;In this section, we discuss the lesser known forest elephants. 
+	&lt;/section&gt; 
+	&lt;section&gt; 
+	   &lt;h1&gt;Habitat&lt;/h1&gt; 
+	   &lt;p&gt;Forest elephants do not live in trees but among them. 
+	&lt;/section&gt; 
+	&lt;aside&gt; 
+	   &lt;p&gt;advertising block 
+	&lt;/aside&gt; 
+&lt;/section&gt; 
+&lt;footer&gt; 
+&lt;p&gt;(c) 2010 The Example company 
+&lt;/footer&gt; 
+ </p>
 
-		</pre>
+		</code></pre>
 	</aside>
         </section>
-</section>>
+</section>
 </body>
 </html>
