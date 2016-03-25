@@ -1,14 +1,14 @@
 {
-  "libros":
-       [
-	       {"categoría" : "cómics",
-	"título": "Dublinés",
-	"autor": "Alfonso Zapico",
-	"año": 2013},
-	{"categoría" : "cómics",
-	"título": "Los ignorantes",
-	"autor": "Etienne Davodeau",
-	"año": 2012}
+	"libros":
+	[
+		{"categoria" : "cómics",
+			"título": "Dublinés",
+			"autor": "Alfonso Zapico",
+			"año": 2013},
+		{"categoria" : "cómics",
+			"título": "Los ignorantes",
+			"autor": "Etienne Davodeau",
+			"año": 2012}
 	]
 }
-	
+
