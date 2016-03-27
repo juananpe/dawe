@@ -11,26 +11,35 @@
   <link href='http://fonts.googleapis.com/css?family=Average|Courgette' rel='stylesheet' type='text/css'>
 
 
-<style>
+  <style>
 #grad1 {
-    height: 250px;
-    width:100%;
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    color:white;
-    opacity:0.95;
+	height: 250px;
+	width:100%;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	color:white;
+	opacity:0.95;
 }
 
 
-#fuente {
-  font: 400 25px/0.5 'Courgette', Helvetica, sans-serif;
+h1 {
+	font: 400 25px/0.5 'Courgette', Helvetica, sans-serif;
 }
- 
+
 p {
-  font: 400 14px/1.5 'Average', Times, serif;
+	font: 400 14px/1.5 'Average', Times, serif;
 }
 
+#redondeado {
+	border-color: #4CAF50 !important;
+	border-width:3px;
+	border-style:solid;
+	margin-top:20px;
+	font-size:15px;
+	padding:25px;
+	border-radius:25px;
+}
 
-</style>
+  </style>
 
 </head>
 
@@ -47,20 +56,67 @@ p {
   <div id="fuente">Inclusión de tipografías externas de Google Fonts, Adobe Edge Web Fonts o un servicio similar on line.</div>
 </section>
 
-<section> Distintos encabezados.</section>
+<section> 
+	<h1>Distintos encabezados</h1>
 
-<section>Uso de caracteres especiales</section>
+	<h2>Encabezado menor</h2>
+
+	<h3>Y menor aún</h3>
+</section>
+
+<section>Uso de caracteres especiales. A veces he tenido que poner una &aacute; o una &tilde; usando caracteres especiales (como en este ejemplo, ver c&oacute;digo)</section>
 
 <section>
 	Incluir, imágenes de tipo bitmap y vectorial.
+	<h1>Imagen bitmap</h1>
+	<img src="https://pbs.twimg.com/profile_images/636535872733757440/9kMBWQxz_200x200.jpg">
+
+<div>
+	<h1>Un ejemplo práctico con SVG</h1>
+	<svg id="svga" width="460" height="460" xmlns="http://www.w3.org/2000/svg">
+				/* Definición de un gradiente */
+				<defs>
+					<radialGradient id="gradientea" cx="40%" cy="40%" r="50%" fx="40%" fy="40%">
+					<stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1"/>
+					<stop offset="100%" style="stop-color:rgb(0,255,0);stop-opacity:1"/>
+					</radialGradient>
+				</defs>
+				<circle cx="250" cy="250" r="200" style="fill:url(#gradientea);stroke-width:20;stroke:rgb(0,0,255)"/>
+
+				/* ojo siempre abierto */
+				<circle cx="175" cy="175" r="20" style="fill-opacity:0.0;stroke-width:20;stroke:rgb(0,0,255)"/>
+
+				/* ojo abierto - cerrado */
+				<circle id ="ojoabierto" cx="325" cy="175" r="20" style="fill-opacity:0.0;stroke-opacity:1.0;stroke-width:20;stroke:rgb(0,0,255)"/>
+				<line id="ojocerrado" x1="300" y1="175" x2="350" y2="175" style="stroke-opacity:0.0;stroke-width:20;stroke:rgb(0,0,255)"/>
+
+				/* nariz */
+				<line x1="250" y1="210" x2="250" y2="260" style="fill-opacity:0.0;stroke-width:20;stroke:rgb(0,0,255)"/>
+
+				/* boca */
+				<path d="M150 300 A100 100 0 0 0 350 300 Z" style="fill-opacity:0.0;stroke-width:20;stroke:rgb(0,0,255)"/>
+			</svg>
+
+</div>
+
 </section>
 
 <section>
-	Incluir algún vídeo.
+	<h1>Incluir algún vídeo</h1>
+
+      <video id="video" controls="" preload="none" mediagroup="myVideoGroup" poster="https://media.w3.org/2010/05/sintel/poster.png">
+      <source id="mp4" src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <source id="webm" src="https://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+      <source id="ogv" src="https://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+      <p>Tu navegador no soporta la etiqueta HTML5 Video.</p>
+    </video>
+
+
 </section>
 
 <section>
-   Incluir bordes redondeados en alguna de sus cajas.
+	<div id="redondeado"><h2>Bordes redondeados</h2></div>
+
 </section>
 
 </section>
