@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buenos días, bienvenido a la calculadora de Juanan Pereira</title>
+<meta charset="utf-8">
+
+<script type="text/javascript">
+  var num, acc = 0, op = "";
+
+  function mas()   { acc = num.value;  op = "+"; }
+  function menos() { acc = num.value;  op = "-"; }
+  function por() { acc = num.value; op = "*"; }
+  function entre() { acc = num.value; op = "/"; }
+  function elevado() { acc = num.value; op = "^"; }
+
+  function calcular() {
+    if (op === "+") {num.value = (+acc + +num.value)}
+    if (op === "-") {num.value = (+acc - +num.value)}
+    if (op === "*") {num.value = (+acc * +num.value)}
+    if (op === "/") {num.value = (+acc / +num.value)}
+    if (op === "^") {num.value = Math.pow(acc,num.value)}
+  }
+
+  function square() {
+	num.value = Math.pow(num.value,2);
+  }
+ 
+  function sqrt() {
+	num.value = Math.sqrt(num.value);
+  }
+ 
+  function inverso() {
+	num.value = 1/num.value;
+  }
+
+  function parte_entera(){
+	if (num.value < 0)
+		num.value = -Math.ceil(num.value);
+	else	
+		num.value = Math.floor(num.value);
+  } 
+  function inic ()   {num = document.getElementById("num");}
+  function vaciar () {num.value = "";}  
+</script>
+</head>
+<body onLoad="inic()">
+  <h1>Buenos días, bienvenido a la calculadora de Juanan Pereira</h1>
+  Número:<p>
+  <input type="text" size="12" id="num" onClick="vaciar()"><p>
+  <button onClick="mas()">+</button>
+  <button onClick="menos()">-</button>
+  <button onClick="por()">*</button>
+  <button onClick="entre()">/</button>
+  <button onClick="elevado()">x^y</button>
+  <button onClick="square()">x^2</button>
+  <button onClick="inverso()">1/x</button>
+  <button onClick="sqrt()">sqrt(x)</button>
+  <button onClick="parte_entera()">parte_entera(x)</button>
+  <button onClick="calcular()">=</button>
+  </p>
+</body>
+</html>
