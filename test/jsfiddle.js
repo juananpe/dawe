@@ -1,5 +1,6 @@
 var page = new WebPage();
-var url = 'http://jsfiddle.net/ancalotoru/tuya1dL9/';
+//var url = 'http://jsfiddle.net/ancalotoru/tuya1dL9/';
+var url = 'http://jsfiddle.net/gw2tzt8t/1/'; // 1 sec
 
 
 //      xpath --> //*[@id="qunit-testresult"]/*/text()
@@ -37,6 +38,6 @@ page.open(url, function (status) {
 				console.log("Passed, total, failed: " + result);
 
 				phantom.exit();
-				},10000);
+				},1000);
 		}
 		});
