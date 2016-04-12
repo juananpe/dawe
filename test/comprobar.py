@@ -4,7 +4,7 @@ import csv
 import urllib2
 from subprocess import check_output
 
-script = "/tmp/dawe/test/jsfiddle.js"
+script = "jsfiddle.js"
 phantomjs = "/tmp/phantomjs-2.1.1-macosx/bin/phantomjs" 
 export ="/export?format=csv"
 
