@@ -24,6 +24,8 @@ with open("/tmp/urls_nombre.txt") as f:
       input_file = csv.DictReader(s)
       for line in input_file:
           url = line['Solución']
+          if url=='':
+             continue
           if not url.startswith("http://"):
              url = "{0}{1}".format("http://",url)
 
