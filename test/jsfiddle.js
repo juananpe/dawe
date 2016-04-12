@@ -3,15 +3,11 @@ var args = system.args;
 
 if (args.length === 1) {
   console.log('Try to pass some arguments when invoking this script!');
-} else {
-  args.forEach(function(arg, i) {
-    console.log(i + ': ' + arg);
-  });
 }
 
 
 var page = new WebPage();
-var url = 'http://jsfiddle.net/ancalotoru/tuya1dL9/';
+var url = args[1];
 // var url = 'http://jsfiddle.net/gw2tzt8t/1/'; // 1 sec
 
 
