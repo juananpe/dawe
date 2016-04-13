@@ -6,7 +6,10 @@ if (args.length === 1) {
 }
 
 
-var page = new WebPage();
+// var page = new WebPage();
+
+var page = require("webpage").create();
+
 var url = args[1];
 // var url = 'http://jsfiddle.net/gw2tzt8t/1/'; // 1 sec
 
@@ -42,6 +45,7 @@ page.open(url, function (status) {
 		setTimeout(function() {
 				// console.log(page.frameContent);
 				// console.log(page.frameContent);
+				page.render('gameover.jpg', {format: 'jpeg', quality: '100'});
 				var result = getElementByXpath("//*[@id='qunit-testresult']/*");
 				console.log("Passed, total, failed: " + result);
 
