@@ -37,6 +37,10 @@ function getElementByXpath(path) {
 }
 
 
+sizeX = args[2]?args[2]:1024;
+sizeY = args[3]?args[3]:768;
+page.viewportSize = { width: sizeX, height: sizeY };
+
 page.open(url, function (status) {
 		if ('success' !== status) {
 		console.log("Error");
@@ -45,11 +49,11 @@ page.open(url, function (status) {
 		setTimeout(function() {
 				// console.log(page.frameContent);
 				// console.log(page.frameContent);
-				page.render('gameover.jpg', {format: 'jpeg', quality: '100'});
+				page.render('/tmp/gameover.jpg', {format: 'jpeg', quality: '100'});
 				var result = getElementByXpath("//*[@id='qunit-testresult']/*");
 				console.log("Passed, total, failed: " + result);
 
 				phantom.exit();
-				},12000);
+				},15000);
 		}
 		});
