@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buenos días, bienvenido a la calculadora de Juanan Pereira</title>
+<meta charset="utf-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script>
+var num, acc = 0, op = "";
+
+function mas()   { acc = num.val();  op = "+"; }
+function menos() { acc = num.val();  op = "-"; }
+function por() { acc = num.val(); op = "*"; }
+function entre() { acc = num.val(); op = "/"; }
+function elevado() { acc = num.val(); op = "^"; }
+
+function calcular() {
+	if (op === "+") {num.val(+acc + +num.val())}
+	if (op === "-") {num.val(+acc - +num.val())}
+	if (op === "*") {num.val(+acc * +num.val())}
+	if (op === "/") {num.val(+acc / +num.val())}
+	if (op === "^") {num.val(Math.pow(acc,num.val()))}
+}
+
+function square() {
+	num.val( Math.pow(num.val(),2) );
+}
+
+function sqrt() {
+	num.val(Math.sqrt(num.val()));
+}
+
+function inverso() {
+	num.val( 1/num.val());
+}
+
+function parte_entera(){
+	if (num.val() < 0)
+		num.val( -Math.ceil(num.val()));
+	else	
+		num.val(Math.floor(num.val()));
+} 
+
+function potencia2n(){
+	num.val(Math.pow(2, num.val()));
+}
+
+
+function factorial()
+{
+	var rval=1;
+	for (var i = 2; i <= num.val(); i++)
+		rval = rval * i;
+	num.val(rval);
+}
+
+function sumatorio(){
+	var operandos = num.val().split(",");
+	var res = 0;
+        for(var i=0; i < operandos.length; i++){
+		res = res + +operandos[i];
+	}
+	num.val(res);
+}
+function producto(){
+	var operandos = num.val().split(",");
+	var res = 1;
+        for(var i=0; i < operandos.length; i++){
+		res = res * operandos[i];
+	}
+	num.val(res);
+}
+
+function vaciar () {num.val("");}  
+
+function inic ()   {
+	num = $("#num");
+	num.click(function(){
+			vaciar();
+			});
+	$("#mas").click(function() {
+			mas();
+			});
+	$("#menos").click(function() {
+			menos();
+			});
+	$("#por").click(function() {
+			por();
+			});
+	$("#entre").click(function() {
+			entre();
+			});
+
+	$("#elevado").click(function() {
+			elevado();
+			});
+
+	$("#square").click(function() {
+			square();
+			});
+
+	$("#inverso").click(function() {
+			inverso();
+			});
+
+	$("#sqrt").click(function() {
+			sqrt();
+			});
+	$("#parte_entera").click(function() {
+			parte_entera();
+			});
+	$("#calcular").click(function() {
+			calcular();
+			});
+	$("#potencia2n").click(function() {
+			potencia2n();
+			});
+	$("#factorial").click(function() {
+			factorial();
+			});
+	$("#sumatorio").click(function() {
+			sumatorio();
+			});
+	$("#producto").click(function() {
+			producto();
+			});
+
+}
+
+$(document).ready(inic);
+
+</script>
+</head>
+<body>
+<h1>Buenos días, bienvenido a la calculadora de Juanan Pereira</h1>
+Número: <input type="text" size="12" id="num">  
+<button id="calcular">=</button>
+<p>Operaciones binarias:</p>
+<button id="mas">+</button>
+<button id="menos">-</button>
+<button id="por">*</button>
+<button id="entre">/</button>
+<button id="elevado">x^y</button>
+<p>Operaciones unitarias:</p>
+<button id="square">x^2</button>
+<button id="inverso">1/x</button>
+<button id="sqrt">sqrt(x)</button>
+<button id="parte_entera">parte_entera(x)</button>
+<button id="potencia2n">2^n</button>
+<button id="factorial">n!</button>
+<p>Operaciones aridad n: (introducir datos en formato CSV)</p>
+<button id="sumatorio">sumatorio(x)</button>
+<button id="producto">producto(x)</button>
+
+
+</body>
+</html>
