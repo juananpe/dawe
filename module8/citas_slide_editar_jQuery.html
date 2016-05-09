@@ -104,6 +104,9 @@ function generar_selector(){ // regenera la botonera
 
                         // this = button element
                         // $noty = $noty element
+	borrarLocalStorage();
+	galeria = original.slice(0);
+	generar_selector();
 
                         $noty.close();
                         noty({force: true, theme: 'relax', text: 'Las citas han sido revertidas a su estado original', type: 'success'});
@@ -131,9 +134,6 @@ $(function (){
 
     generate("confirm","Si pulsas OK se eliminarán las citas almacenadas en localStorage y se recargarán las citas originales. Si no estás seguro, pulsa Cancelar");
 
-	borrarLocalStorage();
-	galeria = original.slice(0);
-	generar_selector();
   });
 
   $("#editar").on("click", function(){
