@@ -22,7 +22,7 @@ page.open(url, function (status) {
 				// console.log(page.frameContent);
 				// console.log(page.frameContent);
 				var result = getElementByXpath("//*[@id='target']");
-				console.log("Passed, total, failed: " + result.style.backgroundColor);
+				console.log("Texto: " + result.innerText.replace(/(\r\n|\n|\r)/gm,""));
 
 				phantom.exit();
 				},1000);
