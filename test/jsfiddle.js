@@ -1,7 +1,8 @@
 var page = new WebPage();
 //var url = 'http://jsfiddle.net/ancalotoru/tuya1dL9/';
-var url = 'http://jsfiddle.net/gw2tzt8t/1/'; // 1 sec
+// var url = 'http://jsfiddle.net/gw2tzt8t/1/'; // 1 sec
 
+var url = "https://lab.pentestit.ru/pentestlabs/5"
 
 //      xpath --> //*[@id="qunit-testresult"]/*/text()
 //     [ passed, total, failed ]
@@ -34,7 +35,7 @@ page.open(url, function (status) {
 		setTimeout(function() {
 				// console.log(page.frameContent);
 				// console.log(page.frameContent);
-				var result = getElementByXpath("//*[@id='qunit-testresult']/*");
+				var result = getElementByXpath("//*[@class='jspPane']");
 				console.log("Passed, total, failed: " + result);
 
 				phantom.exit();
